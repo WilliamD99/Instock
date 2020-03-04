@@ -64,7 +64,7 @@ export default class Modal extends Component {
           </div>
           <div className="modal__form--input">
             <label htmlFor="description">Item Description</label>
-            <textarea name="description"></textarea>
+            <textarea name="description" placeholder="(Optional)"></textarea>
           </div>
           <div className="modal__form--button">
             <input

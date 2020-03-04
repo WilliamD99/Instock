@@ -98,18 +98,21 @@
 .modal__form--input input,
 .modal__form--input select {
   height: 2rem;
-  padding: 0.3rem;
+  padding: 0.5rem 1rem;
   background-color: #fafafa;
   border-color: #afafaf;
   outline: none;
+  border-radius: 0.5rem;
 }
 
 .modal__form--input textarea {
   height: 4rem;
+  padding: 0.5rem 1rem;
   resize: none;
   background-color: #fafafa;
   border-color: #afafaf;
   outline: none;
+  border-radius: 0.5rem;
 }
 
 .modal__form--button {
@@ -139,5 +142,13 @@
   border: none;
   height: 3.5rem;
   font-size: 1.05rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
