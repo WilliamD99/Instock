@@ -1,7 +1,37 @@
+.create-button {
+  background-color: $instock-blue-dark;
+  color: $white;
+  font-size: 2rem;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.modal-wraper {
+  position: absolute;
+  background-color: initial;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+}
 .modal {
   display: none;
-  margin: 1rem;
-  height: 100%;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  padding: 0.5rem 1rem;
+  background-color: $white;
+  z-index: 9999;
+  transition: 0.5s;
   &__form {
     display: flex;
     flex-direction: column;
@@ -63,6 +93,7 @@
         height: 2rem;
         padding: 0.5rem 1rem;
         background-color: $alabaster;
+        border: solid 1px;
         border-color: $silver;
         outline: none;
         border-radius: 0.5rem;
@@ -72,30 +103,33 @@
         padding: 0.5rem 1rem;
         resize: none;
         background-color: $alabaster;
+        border: solid 1px;
         border-color: $silver;
         outline: none;
         border-radius: 0.5rem;
       }
-    }
-    &--button {
-      display: flex;
-      flex-direction: column;
-      margin-top: 1rem;
-      &-save {
-        height: 3.5rem;
-        margin-bottom: 0.5rem;
-        background-color: $instock-blue-dark;
-        color: $white;
-        font-size: 1.05rem;
-        border-radius: 0.5rem;
-      }
-      &-cancel {
-        background-color: $white;
-        color: $instock-blue-dark;
-        outline: none;
-        border: none;
-        height: 3.5rem;
-        font-size: 1.05rem;
+      &-button {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        #save {
+          height: 3.5rem;
+          margin-bottom: 0.5rem;
+          background-color: $instock-blue-dark;
+          color: $white;
+          font-size: 1.05rem;
+          border-radius: 0.5rem;
+          cursor: pointer;
+        }
+        #cancel {
+          background-color: $white;
+          color: $instock-blue-dark;
+          outline: none;
+          border: none;
+          height: 3.5rem;
+          font-size: 1.05rem;
+          cursor: pointer;
+        }
       }
     }
   }
