@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/main.css";
+import Location from "./components/Location";
 import Modal from "./components/Modal";
 import $ from "jquery";
 
@@ -16,6 +17,7 @@ function App() {
         Click me
       </button>
       <Modal></Modal>
+      <Location />
     </div>
   );
 }
