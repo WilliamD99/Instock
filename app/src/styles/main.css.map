@@ -9,7 +9,9 @@
         "partials/base/_fonts.scss",
         "partials/base/_headings.scss",
         "partials/components/_header.scss",
-        "partials/components/_location.scss"
+        "partials/components/_location.scss",
+        "partials/components/_modal.scss",
+        "partials/layout/_mainContent.scss"
     ],
     "names": [],
     "file": "main.css"
