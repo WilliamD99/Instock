@@ -1,1 +1,7 @@
-@import "./partials/breakpoints";
+@import "./partials/layout/breakpoints";
+@import "./partials/base/reset";
+@import "./partials/base/colors";
+@import "./partials/base/fonts";
+@import "./partials/base/headings";
+@import "./partials/components/header";
+@import "./partials/components/location";

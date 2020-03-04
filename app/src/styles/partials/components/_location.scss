@@ -1,0 +1,155 @@
+/* Mobile First */
+.location {
+  margin: 0 16px;
+  background-color: $alabaster;
+  &__name {
+    @include headings(0.8rem, 1.2rem);
+    @include demi;
+    margin: 0;
+  }
+  &__info {
+    @include headings(0.8rem, 1.2rem);
+    @include regular;
+    margin: 0;
+  }
+  &__contact-title {
+    @include headings(0.8rem, 1.2rem);
+    @include regular;
+    margin: 0;
+  }
+  &__label {
+    @include headings(0.6rem, 1.2rem);
+    @include demi;
+    text-transform: uppercase;
+    color: $silver;
+    margin: 0;
+  }
+  &__warehouse-wrap {
+    width: 20%;
+  }
+  &__contact-wrap {
+    @extend .location__warehouse-wrap;
+  }
+  &__information-wrap {
+    @extend .location__warehouse-wrap;
+  }
+  &__location-info {
+    margin: 8px 0 24px 0;
+  }
+  &__venue-info {
+    @extend .location__location-info;
+  }
+  &__button {
+    background-color: $white;
+    color: $silver;
+    @include headings(1rem, 1.5rem);
+    @include demi;
+    margin: 0 0 24px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    border: 0;
+    width: 20px;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  &__date-wrap {
+    margin-bottom: 36px;
+  }
+  &__item {
+    display: flex;
+    border-bottom: 1px solid $mercury;
+    padding: 1.5rem 0 0 0;
+  }
+}
+/* Tablet */
+@include tablet {
+  .location {
+    margin: 0 24px;
+    &__title {
+      @include headings(2.4rem, 1.5rem);
+      margin: 48px 0 58px 0;
+    }
+    &__date-label:nth-child(3) {
+      margin: 0 0 0 13rem;
+    }
+    &__date-label:nth-child(5) {
+      margin: 0 0 0 23.2rem;
+    }
+    &__date {
+      display: flex;
+      flex-direction: row;
+      padding: 2rem 0 0 0;
+      position: relative;
+      margin: 0 auto;
+    }
+    &__date:nth-child(n + 2) {
+      h5 {
+        display: none;
+      }
+    }
+    &__date-label(1) {
+      margin: 0 0 1rem 0;
+    }
+    &__button {
+      width: 20px;
+      align-items: flex-end;
+      padding: 15px 20px;
+      margin: 0 0 48px 0;
+      margin-bottom: 30px;
+    }
+    &__date-label {
+      float: left;
+      position: absolute;
+      top: -15%;
+    }
+    &__date-info {
+      width: 26%;
+      margin: 0 1.5rem 0 0;
+    }
+    &__venue-info {
+      width: 18%;
+      margin: 0 2.5rem 0 0;
+    }
+    &__location-info {
+      width: 18%;
+      margin: 0 2rem 0 0;
+    }
+    &__wrap {
+      width: 100%;
+    }
+    &__date-wrap {
+      margin-bottom: 36px;
+    }
+  }
+}
+/* Desktop */
+@include desktop {
+  .location {
+    &__title-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    &__title {
+      width: 1024px;
+    }
+    &__date-label:nth-child(3) {
+      margin: 0 0 0 16rem;
+    }
+    &__date-label:nth-child(5) {
+      margin: 0 0 0 28.1rem;
+    }
+    &__date-wrap {
+      width: 896px;
+      margin: 0 auto;
+    }
+    &__date {
+      width: 100%;
+    }
+  }
+}
