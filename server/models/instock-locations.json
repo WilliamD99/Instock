@@ -23,5 +23,30 @@
             "Mechanical",
             "Engineering"
         ]
+    },
+    {
+        "id": "123457",
+        "name": "Warehouse Number 2",
+        "address": {
+            "street": "123 Main Street W",
+            "number": "Suite 201",
+            "postal": "M65GB7",
+            "city": "Toronto",
+            "province": "ON",
+            "country": "CA"
+        },
+        "contact": {
+            "name": "Mara Weinberg",
+            "title": "Warehouse Manager",
+            "phone": "604-354-0232",
+            "email": "weinberg@instock.com"
+        },
+        "categories": [
+            "Industrial",
+            "Automotive",
+            "Heavy",
+            "Mechanical",
+            "Engineering"
+        ]
     }
 ]
