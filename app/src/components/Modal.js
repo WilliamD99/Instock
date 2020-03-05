@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { revealModal, cancel } from "../helpers/toggleModal";
+import Switch from "react-switch";
 
 export default class Modal extends Component {
   constructor(props) {
@@ -10,27 +11,20 @@ export default class Modal extends Component {
       city: null,
       country: null,
       quantity: null,
-      status: false,
+      checked: false,
       description: null
     };
   }
   handleChange = event => {
     const target = event.target;
-    if (target.type !== "checkbox") {
-      this.setState({
-        [target.name]: target.value
-      });
-    } else {
-      if (this.state.status === false) {
-        this.setState({
-          status: true
-        });
-      } else {
-        this.setState({
-          status: false
-        });
-      }
-    }
+    this.setState({
+      [target.name]: target.value
+    });
+  };
+  switchHandle = checked => {
+    this.setState({
+      checked
+    });
   };
   render() {
     return (
@@ -94,14 +88,15 @@ export default class Modal extends Component {
                 <label>Status</label>
                 <div className="switch-container">
                   <p>In Stock</p>
-                  <input
-                    type="checkbox"
-                    id="switch"
-                    onClick={this.handleChange}
-                    value="false"
-                    name="switch"
-                  ></input>
-                  <label htmlFor="switch"></label>
+                  <label>
+                    <Switch
+                      onChange={this.switchHandle}
+                      checked={this.state.checked}
+                      checkedIcon={false}
+                      uncheckedIcon={false}
+                      activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                    />
+                  </label>
                 </div>
               </div>
               <div className="modal__form--input">
