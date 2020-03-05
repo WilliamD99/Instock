@@ -1,6 +1,5 @@
 /* media query for tablet */
 /* media query for desktop */
-/* media query for landscape, medium pixel density desktops */
 html,
 body {
   margin: 0;
@@ -83,14 +82,8 @@ p {
 
 /* Mobile First */
 .location {
-  margin: 0 16px 16px 16px;
-  /* background-color: $alabaster; */
-}
-
-.location__section-title {
-  font-size: 1.8rem;
-  line-height: 1.5rem;
-  margin: 32px 0 16px 0;
+  margin: 0 16px;
+  background-color: #FAFAFA;
 }
 
 .location__name {
@@ -102,7 +95,7 @@ p {
 
 .location__info {
   font-size: 0.8rem;
-  line-height: 1.4rem;
+  line-height: 1.2rem;
   font-family: avenirNextRegular, Helvetica, Arial, sans-serif;
   margin: 0;
 }
@@ -115,7 +108,7 @@ p {
 }
 
 .location__label {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   line-height: 1.2rem;
   font-family: avenirNextDemi, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -123,15 +116,15 @@ p {
   margin: 0;
 }
 
-.location__warehouse-wrap, .location__contact-wrap, .location__information-wrap, .location__categories-wrap {
-  width: 100%;
-  margin: 0 0 24px 0;
+.location__warehouse-wrap, .location__contact-wrap, .location__information-wrap {
+  width: 20%;
 }
 
 .location__location-info, .location__venue-info {
   margin: 8px 0 24px 0;
 }
 
+<<<<<<< HEAD
 .location__input {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -154,14 +147,21 @@ p {
   position: absolute;
   font-size: 1.6rem;
   line-height: 0;
+=======
+.location__button {
+  background-color: #fff;
+  color: #AFAFAF;
+  font-size: 1rem;
+  line-height: 1.5rem;
+>>>>>>> parent of e6f2a52... Almost finished the Locations session, changed the breakpoints
   font-family: avenirNextDemi, Helvetica, Arial, sans-serif;
-  margin: 0;
-  left: 10em;
-  bottom: 11.5em;
+  margin: 0 0 24px 0;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 5px;
   border: 0;
+  width: 20px;
 }
 
 .location__button:focus {
@@ -169,7 +169,7 @@ p {
 }
 
 .location__button:hover {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .location__date-wrap {
@@ -177,9 +177,17 @@ p {
 }
 
 .location__item {
+<<<<<<< HEAD
   border-bottom: 1px solid #e1e1e1;
   position: relative;
   padding: 32px 0 0 0;
+=======
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #E1E1E1;
+  padding: 1.5rem 0 0 0;
+>>>>>>> parent of e6f2a52... Almost finished the Locations session, changed the breakpoints
 }
 
 /* Tablet */
@@ -191,23 +199,6 @@ p {
     font-size: 2.4rem;
     line-height: 1.5rem;
     margin: 48px 0 58px 0;
-  }
-  .location__top-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .location__warehouse-wrap, .location__contact-wrap, .location__information-wrap, .location__categories-wrap {
-    width: 100%;
-  }
-  .location__contact-wrap {
-    width: 30%;
-  }
-  .location__information-wrap {
-    width: 30%;
-  }
-  .location__categories-wrap {
-    width: 30%;
   }
   .location__date-label:nth-child(3) {
     margin: 0 0 0 13rem;
@@ -234,8 +225,13 @@ p {
     margin: 0 0 1rem 0;
   }
   .location__button {
-    left: 27em;
-    bottom: 5em;
+    width: 20px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 15px 20px;
+    margin: 0 0 48px 0;
+    margin-bottom: 30px;
   }
   .location__date-label {
     float: left;
@@ -260,22 +256,10 @@ p {
   .location__date-wrap {
     margin-bottom: 36px;
   }
-  .location__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .location__form {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
 }
 
 /* Desktop */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1441px) {
   .location__title-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -286,19 +270,6 @@ p {
   }
   .location__title {
     width: 1024px;
-  }
-  .location__warehouse-wrap, .location__contact-wrap, .location__information-wrap, .location__categories-wrap {
-    width: 16%;
-    margin-right: 4em;
-  }
-  .location__contact-wrap {
-    width: 18%;
-  }
-  .location__information-wrap {
-    width: 18%;
-  }
-  .location__categories-wrap {
-    width: 18%;
   }
   .location__date-label:nth-child(3) {
     margin: 0 0 0 16rem;
@@ -312,17 +283,6 @@ p {
   }
   .location__date {
     width: 100%;
-  }
-  .location__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  .location__button {
-    left: 36.5em;
-    bottom: 2em;
   }
 }
 

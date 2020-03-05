@@ -79,22 +79,7 @@ export default function Location() {
     }
   ];
 
-  console.log(locationsArray[0].categories);
   const listOfLocations = locationsArray.map((listData, index) => {
-    const categoriesObject = locationsArray[index].categories.map(
-      (listData, index) => {
-        console.log(listData);
-        return {
-          listData
-        };
-      }
-    );
-    const listOfCategories = categoriesObject.map((listData, index) => {
-      let data = listData.listData + ", ";
-      console.log(data);
-      return data;
-    });
-
     return (
       <div className="location__item">
         <div className="location__warehouse-wrap">
@@ -127,7 +112,7 @@ export default function Location() {
         <div className="location__categories-wrap">
           <h5 className="location__label">Categories</h5>
           <h2 className="location__info" key={index}>
-            {listOfCategories}
+            {listData.contact.categories}
           </h2>
         </div>
         <button className="location__button">></button>
