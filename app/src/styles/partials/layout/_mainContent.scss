@@ -5,7 +5,7 @@
     font-size: 4.5rem;
   }
   .modal {
-    height: 35%;
+    height: 85%;
     width: 60%;
     left: 20%;
     top: 10%;
@@ -40,10 +40,10 @@
 }
 @include desktop {
   .modal {
-    height: 35%;
     width: 40%;
+    height: 80%;
     left: 30%;
-    top: 20%;
+    top: 15%;
     padding: 1.5rem;
     &__form {
       justify-content: space-between;
