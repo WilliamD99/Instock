@@ -1,0 +1,71 @@
+/* Mobile First */
+.header {
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  /* height: 80px; */
+  text-align: center;
+  &__logo-link {
+    margin: 0;
+    padding: 0;
+  }
+  &__logo {
+    width: 120px;
+    margin: 16px 0;
+  }
+  &__menu {
+    display: flex;
+    justify-content: center;
+  }
+  &__menu-link {
+    width: 50%;
+    text-decoration: none;
+    font-family: avenirNextRegular;
+    font-size: 0.9rem;
+    color: $silver;
+    padding-bottom: 10px;
+    &.active {
+      color: $white;
+      border-bottom: 4px solid $white;
+    }
+  }
+}
+/* Tablet */
+@include tablet {
+  .header {
+    flex-direction: row;
+    &__wrap {
+      background-color: $black;
+      width: 100%;
+      display: flex;
+      /* margin: 0 auto; */
+    }
+    &__logo {
+      margin: 30px;
+    }
+    &__menu {
+      padding-top: 35px;
+    }
+    &__menu-link {
+      width: 55%;
+      padding: 0 35px 22px 35px;
+    }
+  }
+}
+/* Desktop */
+@include desktop {
+  .header {
+    &__wrap {
+      width: 1080px;
+      margin: 0 auto;
+    }
+  }
+}
+/* Desktop Huge */
+@include huge {
+  .header {
+    &__wrap {
+      margin: 0 auto;
+    }
+  }
+}

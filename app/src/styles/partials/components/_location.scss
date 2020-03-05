@@ -1,6 +1,6 @@
 /* Mobile First */
 .location {
-  margin: 0 16px 16px 16px;
+  padding: 0 16px 16px 16px;
   /* background-color: $alabaster; */
   &__section-title {
     @include headings(1.8rem, 1.5rem);
@@ -50,7 +50,7 @@
     border-radius: 5px;
     padding: 12px;
     &:focus {
-      border: 2px solid $black;
+      border: 1px solid $black;
       outline: none;
     }
   }
@@ -61,8 +61,8 @@
     @include headings(1.6rem, 0);
     @include demi;
     margin: 0;
-    left: 10em;
-    bottom: 11.5em;
+    left: 78vw;
+    bottom: 57vh;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -83,7 +83,9 @@
 /* Tablet */
 @include tablet {
   .location {
-    margin: 0 24px;
+    width: 100vw;
+    padding: 0 24px;
+    margin: 0 auto;
     &__section-title {
       @include headings(2.4rem, 1.5rem);
       margin: 48px 0 58px 0;
@@ -125,8 +127,8 @@
       margin: 0 0 1rem 0;
     } */
     &__button {
-      left: 27em;
-      bottom: 5em;
+      left: 86vw;
+      bottom: 22vh;
     }
     &__item {
       display: flex;
@@ -140,6 +142,8 @@
 /* Desktop */
 @include desktop {
   .location {
+    width: 1080px;
+    margin: 0 auto;
     &__warehouse-wrap {
       width: 16%;
       margin-right: 4em;
@@ -171,8 +175,8 @@
       flex-wrap: nowrap;
     }
     &__button {
-      left: 36.5em;
-      bottom: 2em;
+      left: 92.5vw;
+      bottom: 8vh;
     }
   }
 }
