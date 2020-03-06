@@ -38,7 +38,6 @@ export default function Location({ locations }) {
     });
   }
 
-  console.log(contents);
   return (
     <section className="location">
       <div className="location__top-wrap">

@@ -3,6 +3,7 @@ import "./styles/main.css";
 import Location from "./components/Location";
 import Modal from "./components/Modal";
 import Header from "./components/Header";
+
 import API from "./helpers/API";
 
 class App extends Component {
@@ -28,5 +29,4 @@ class App extends Component {
       </div>
     );
   }
-}
 export default App;
