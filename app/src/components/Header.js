@@ -1,19 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom"; */
 import Logo from "../assets/Logo/Logo-instock.svg";
 
 export default function Header() {
   return (
     <header className="header">
       <div className="header__wrap">
-        <a className="header__logo-link" href="#">
+        <a className="header__logo-link" href="/">
           <img className="header__logo" src={Logo} alt="InStock Logo" />
         </a>
         <nav className="header__menu">
-          <a className="header__menu-link active" href="#">
+          <a className="header__menu-link active" href="/">
             Inventory
           </a>
-          <a className="header__menu-link" href="#">
+          <a className="header__menu-link" href="/">
             Locations
           </a>
         </nav>
