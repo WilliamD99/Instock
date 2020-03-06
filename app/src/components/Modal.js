@@ -6,13 +6,7 @@ export default class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: null,
-      date: null,
-      city: null,
-      country: null,
-      quantity: null,
-      checked: false,
-      description: null
+      checked: false
     };
   }
   handleChange = event => {
