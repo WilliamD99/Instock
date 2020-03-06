@@ -79,11 +79,11 @@ export default function Location() {
     }
   ];
 
-  console.log(locationsArray[0].categories);
+  /* console.log(locationsArray[0].categories); */
   const listOfLocations = locationsArray.map((listData, index) => {
     const categoriesObject = locationsArray[index].categories.map(
       (listData, index) => {
-        console.log(listData);
+        /* console.log(listData); */
         return {
           listData
         };
@@ -99,9 +99,12 @@ export default function Location() {
       <div className="location__item">
         <div className="location__warehouse-wrap">
           <h5 className="location__label">Warehouse</h5>
-          <h2 className="location__name" key={index}>
-            {listData.name}
-          </h2>
+          <div className="location__warehouse-button-wrap">
+            <h2 className="location__name" key={index}>
+              {listData.name}
+            </h2>
+            <button className="location__button">></button>
+          </div>
           <h2 className="location__info" key={index}>
             {listData.address.street}
           </h2>
@@ -130,7 +133,6 @@ export default function Location() {
             {listOfCategories}
           </h2>
         </div>
-        <button className="location__button">></button>
       </div>
     );
   });

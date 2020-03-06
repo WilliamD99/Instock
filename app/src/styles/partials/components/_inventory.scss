@@ -1,5 +1,5 @@
 /* Mobile First */
-.location {
+.inventory {
   padding: 0 16px 16px 16px;
   /* background-color: $alabaster; */
   &__section-title {
@@ -11,7 +11,7 @@
     @include demi;
     margin: 0;
   }
-  &__info {
+  &__order {
     @include headings(0.8rem, 1.4rem);
     @include regular;
     margin: 0;
@@ -83,7 +83,7 @@
 }
 /* Tablet */
 @include tablet {
-  .location {
+  .inventory {
     width: 100vw;
     padding: 0 24px;
     margin: 0 auto;
@@ -122,7 +122,7 @@
 }
 /* Desktop */
 @include desktop {
-  .location {
+  .inventory {
     width: 1080px;
     margin: 0 auto;
     &__warehouse-wrap {
