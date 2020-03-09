@@ -1,0 +1,194 @@
+/* Mobile First */
+.product {
+  padding: 0 16px 16px 16px;
+  &__section-title {
+    @include headings(1.8rem, 1.5rem);
+    margin: 32px 0 16px 0;
+  }
+  &__name {
+    @include headings(0.8rem, 1.2rem);
+    @include demi;
+    margin: 0;
+  }
+  &__description,
+  &__client,
+  &__reference,
+  &__date,
+  &__location,
+  &__quantity,
+  &__status {
+    @include headings(0.8rem, 1.4rem);
+    @include regular;
+    margin: 0;
+  }
+  &__contact-title {
+    @include headings(0.8rem, 1.2rem);
+    @include regular;
+    margin: 0;
+  }
+  &__label {
+    @include headings(0.7rem, 1.2rem);
+    @include demi;
+    text-transform: uppercase;
+    color: $silver;
+    margin: 0;
+  }
+  &__product-item-wrap,
+  &__order-wrap,
+  &__client-wrap,
+  &__reference-wrap,
+  &__location-wrap,
+  &__quantity-wrap,
+  &__status-wrap {
+    width: 100%;
+    margin: 0 0 24px 0;
+  }
+  &__edit-button-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__stock-button {
+    background-color: #63b03e;
+    color: $white;
+    @include headings(0.8rem, 0);
+    @include demi;
+    width: 96px;
+    height: 1.8rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    &:hover {
+      background-color: $brainflix-blue;
+    }
+  }
+  &__edit-button {
+    background-color: $instock-blue;
+    color: $white;
+    @include headings(1.2rem, 0);
+    @include demi;
+    width: 288px;
+    height: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: $brainflix-blue;
+    }
+  }
+  &__item {
+    position: relative;
+    padding: 32px 0 0 0;
+  }
+}
+/* Tablet */
+@include tablet {
+  .product {
+    width: 100vw;
+    padding: 0 24px;
+    margin: 0 auto;
+    /* display: flex; */
+    &__section-title {
+      @include headings(2.4rem, 1.5rem);
+      margin: 56px 24px 56px 0;
+    }
+    &__item-wrap {
+      width: 100%;
+      border-bottom: 1px solid $mercury;
+    }
+    &__top-wrap {
+      display: flex;
+      border-bottom: 1px solid $mercury;
+    }
+    &__product-item-wrap {
+      width: 100%;
+    }
+    &__desktop-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    &__client-wrap {
+      width: 50%;
+    }
+    &__reference-wrap {
+      width: 50%;
+    }
+    &__order-wrap {
+      width: 50%;
+    }
+    &__location-wrap {
+      width: 50%;
+    }
+    &__quantity-wrap {
+      width: 100%;
+    }
+    &__status-wrap {
+      width: 100%;
+    }
+    &__description,
+    &__client,
+    &__reference,
+    &__date,
+    &__location,
+    &__quantity,
+    &__status {
+      margin: 0 0 32px 0;
+    }
+    &__item:nth-child(n + 2) {
+      h5 {
+        display: none;
+      }
+    }
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 42px 0 0 0;
+    }
+    &__edit-button {
+      margin: 48px 0;
+      width: 160px;
+    }
+    &__stock-button {
+      align-self: center;
+    }
+  }
+}
+/* Desktop */
+@include desktop {
+  .product {
+    width: 1080px;
+    margin: 0 auto;
+    &__item-wrap {
+      display: flex;
+    }
+    &__description {
+      width: 90%;
+    }
+    &__product-item-wrap {
+      width: 50%;
+    }
+    &__desktop-wrap {
+      width: 50%;
+    }
+    &__client-wrap,
+    &__reference-wrap,
+    &__order-wrap,
+    &__location-wrap {
+      width: 50%;
+    }
+    &__quantity-wrap {
+      width: 100%;
+    }
+    &__status-wrap {
+      width: 100%;
+    }
+  }
+}
