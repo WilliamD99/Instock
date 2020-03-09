@@ -85,13 +85,9 @@ export default function Inventory() {
     }
   ];
 
-  console.log(inventoryArray);
   const listOfItems = inventoryArray.map((listItems, index) => {
-    console.log(listItems);
-
     const itemsObject = inventoryArray[index].items.map(
       (objectsList, index) => {
-        console.log(objectsList.name);
         //map through categories here
         return (
           <div className="inventory__item">

@@ -2,7 +2,6 @@ import React from "react";
 
 export default function Location({ locations }) {
   let contents = [];
-  console.log(locations);
   if (locations !== null) {
     locations.map((location, index) => {
       let categories = location.categories.join(", ");
