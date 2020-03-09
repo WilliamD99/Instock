@@ -20,8 +20,13 @@ export default function Inventory({ inventory }) {
           render={props => {
             const id = props.match.params.id;
             const ref = props.match.params.ref;
-
-            console.log(inventory);
+            const location = inventory.find(matchId => {
+              return id === matchId.id;
+            });
+            const item = location.items.find(matchRef => {
+              return ref === matchRef.ref;
+            });
+            return <Product item={item} />;
           }}
         ></Route>
       </Switch>
