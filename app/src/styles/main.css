@@ -213,6 +213,15 @@ p {
   margin: 0 0 24px 0;
 }
 
+.location__warehouse-button-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .location__input {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -232,16 +241,14 @@ p {
 .location__button {
   background-color: transparent;
   color: #afafaf;
-  position: absolute;
   font-size: 1.6rem;
   line-height: 0;
   font-family: avenirNextDemi, Helvetica, Arial, sans-serif;
   margin: 0;
-  left: 78vw;
-  bottom: 57vh;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
   border: 0;
 }
 
@@ -265,53 +272,34 @@ p {
     width: 100vw;
     padding: 0 24px;
     margin: 0 auto;
-    /* &__date-label:nth-child(3) {
-      margin: 0 0 0 13rem;
-    }
-    &__date-label:nth-child(5) {
-      margin: 0 0 0 23.2rem;
-    }
-    &__date {
-      display: flex;
-      flex-direction: row;
-      padding: 2rem 0 0 0;
-      position: relative;
-      margin: 0 auto;
-    }
-    &__date:nth-child(n + 2) {
-      h5 {
-        display: none;
-      }
-    }
-    &__date-label(1) {
-      margin: 0 0 1rem 0;
-    } */
   }
   .location__section-title {
     font-size: 2.4rem;
     line-height: 1.5rem;
-    margin: 48px 0 58px 0;
+    margin: 56px 0 14px 0;
   }
   .location__top-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .location__warehouse-wrap, .location__contact-wrap, .location__information-wrap, .location__categories-wrap {
     width: 100%;
   }
   .location__contact-wrap {
-    width: 30%;
+    width: 35%;
   }
   .location__information-wrap {
-    width: 30%;
+    width: 35%;
   }
   .location__categories-wrap {
     width: 30%;
   }
-  .location__button {
-    left: 86vw;
-    bottom: 22vh;
+  .location__input {
+    width: 100%;
   }
   .location__item {
     display: -webkit-box;
@@ -321,9 +309,9 @@ p {
         flex-wrap: wrap;
   }
   .location__form {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    width: 224px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 
@@ -332,32 +320,22 @@ p {
   .location {
     width: 1080px;
     margin: 0 auto;
-    /* &__date-label:nth-child(3) {
-      margin: 0 0 0 16rem;
-    }
-    &__date-label:nth-child(5) {
-      margin: 0 0 0 28.1rem;
-    }
-    &__date-wrap {
-      width: 896px;
-      margin: 0 auto;
-    }
-    &__date {
-      width: 100%;
-    } */
   }
   .location__warehouse-wrap, .location__contact-wrap, .location__information-wrap, .location__categories-wrap {
-    width: 16%;
+    width: 20%;
     margin-right: 4em;
   }
   .location__contact-wrap {
-    width: 18%;
+    width: 20%;
   }
   .location__information-wrap {
-    width: 18%;
+    width: 20%;
   }
   .location__categories-wrap {
-    width: 18%;
+    width: 20%;
+  }
+  .location__item:nth-child(n + 2) h5 {
+    display: none;
   }
   .location__item {
     display: -webkit-box;
@@ -366,20 +344,15 @@ p {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .location__button {
-    left: 92.5vw;
-    bottom: 8vh;
+  .location__form {
+    width: 280px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
-}
-
-.inventory {
-  padding: 0 16px 16px 16px;
-}
-
-.inventory-header__title {
-  font-size: 1.8rem;
-  line-height: 1.5rem;
-  margin: 32px 0 16px 0;
+  .location__button {
+    position: absolute;
+    right: 1rem;
+  }
 }
 
 .create-button {
@@ -389,12 +362,12 @@ p {
   position: fixed;
   bottom: 10%;
   right: 5%;
-  height: 4rem;
-  width: 4rem;
+  height: 3/75rem;
+  width: 3.75rem;
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .modal-wraper {
@@ -532,9 +505,7 @@ p {
 
 @media only screen and (min-width: 768px) {
   .create-button {
-    height: 6rem;
-    width: 6rem;
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
   .modal {
     height: 85%;
