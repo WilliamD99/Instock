@@ -1,7 +1,7 @@
 /* Mobile First */
 .inventory {
+  display: inherit;
   padding: 0 16px 16px 16px;
-  /* background-color: $alabaster; */
   &__section-title {
     @include headings(1.8rem, 1.5rem);
     margin: 32px 0 16px 0;
@@ -10,8 +10,16 @@
     @include headings(0.8rem, 1.2rem);
     @include demi;
     margin: 0;
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
-  &__order {
+  &__description,
+  &__date,
+  &__location,
+  &__quantity,
+  &__status {
     @include headings(0.8rem, 1.4rem);
     @include regular;
     margin: 0;
@@ -28,22 +36,19 @@
     color: $silver;
     margin: 0;
   }
-  &__warehouse-wrap {
+  &__product-item-wrap,
+  &__order-wrap,
+  &__location-wrap,
+  &__quantity-wrap,
+  &__status-wrap {
     width: 100%;
     margin: 0 0 24px 0;
+    z-index: 2;
   }
-  &__warehouse-button-wrap {
+  &__item-button-wrap {
     display: flex;
     justify-content: space-between;
-  }
-  &__contact-wrap {
-    @extend .location__warehouse-wrap;
-  }
-  &__information-wrap {
-    @extend .location__warehouse-wrap;
-  }
-  &__categories-wrap {
-    @extend .location__warehouse-wrap;
+    z-index: 10000;
   }
   &__input {
     @include headings(1rem, 1.5rem);
@@ -95,28 +100,53 @@
       display: flex;
       justify-content: space-between;
     }
-    &__warehouse-wrap {
+    &__item-wrap {
       width: 100%;
     }
-    &__contact-wrap {
-      width: 35%;
+    &__product-item-wrap {
+      width: 36%;
     }
-    &__information-wrap {
-      width: 35%;
+    &__order-wrap {
+      width: 16%;
     }
-    &__categories-wrap {
-      width: 30%;
+    &__location-wrap {
+      width: 16%;
+    }
+    &__quantity-wrap {
+      width: 16%;
+    }
+    &__status-wrap {
+      width: 16%;
+    }
+    &__description {
+      width: 90%;
+    }
+    &__date,
+    &__location,
+    &__quantity,
+    &__status {
+      margin: 18px 0 0 0;
     }
     &__input {
       width: 100%;
     }
+    &__item:nth-child(n + 2) {
+      h5 {
+        display: none;
+      }
+    }
     &__item {
       display: flex;
-      flex-wrap: wrap;
+      padding: 26px 0 0 0;
     }
     &__form {
       width: 224px;
       align-self: flex-end;
+    }
+    &__button {
+      position: absolute;
+      right: 1rem;
+      top: 3em;
     }
   }
 }
@@ -125,23 +155,18 @@
   .inventory {
     width: 1080px;
     margin: 0 auto;
-    &__warehouse-wrap {
-      width: 20%;
+    &__item-wrap {
+      width: 100%;
       margin-right: 4em;
     }
-    &__contact-wrap {
+    &__order-wrap {
       width: 20%;
     }
-    &__information-wrap {
+    &__location-wrap {
       width: 20%;
     }
-    &__categories-wrap {
+    &__quantity-wrap {
       width: 20%;
-    }
-    &__item:nth-child(n + 2) {
-      h5 {
-        display: none;
-      }
     }
     &__item {
       display: flex;
@@ -154,6 +179,7 @@
     &__button {
       position: absolute;
       right: 1rem;
+      top: 2.8em;
     }
   }
 }

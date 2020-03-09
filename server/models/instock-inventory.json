@@ -16,7 +16,8 @@
                     "Fruits"
                 ],
                 "description": "This is bananas",
-                "date": "05/25/2019"
+                "date": "05/25/2019",
+                "client": "Nam Doan"
             },
             {
                 "ref": "JK2020FD7811202",
@@ -32,7 +33,8 @@
                     "Fruits"
                 ],
                 "description": "This is apples",
-                "date": "09/13/2019"
+                "date": "09/13/2019",
+                "client": "Vinicius"
             }
         ]
     },
@@ -53,7 +55,8 @@
                     "Fruits"
                 ],
                 "description": "This is pearls",
-                "date": "12/04/2019"
+                "date": "12/04/2019",
+                "client": "John"
             }
         ]
     }

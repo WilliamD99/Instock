@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./styles/main.css";
 import Location from "./components/Location";
-import Modal from "./components/Modal";
 import Header from "./components/Header";
-import Inventory from "./components/Inventory";
 import API from "./helpers/API";
 import {
   BrowserRouter as Router,
@@ -11,6 +9,7 @@ import {
   Route,
   Switch
 } from "react-router-dom";
+import Inventory from "./components/Inventory";
 
 class App extends Component {
   state = {
@@ -46,7 +45,6 @@ class App extends Component {
               path="/inventory"
               render={() => <Inventory inventory={this.state.inventory} />}
             ></Route>
-            <Modal />
           </Switch>
         </Router>
       );
