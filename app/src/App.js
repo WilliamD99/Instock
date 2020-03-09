@@ -4,6 +4,8 @@ import Location from "./components/Location";
 import Modal from "./components/Modal";
 import Header from "./components/Header";
 import Inventory from "./components/Inventory";
+
+import Product from "./components/Product";
 import API from "./helpers/API";
 import {
   BrowserRouter as Router,

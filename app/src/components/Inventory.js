@@ -15,6 +15,7 @@ export default function Inventory({ inventory }) {
               <h2 className="inventory__name">{item.name}</h2>
               <p>{item.description}</p>
               <button className="inventory__button">></button>
+
             </div>
             <h5 className="inventory__label">Location</h5>
             <h2 className="inventory__info">
@@ -49,7 +50,7 @@ export default function Inventory({ inventory }) {
     htmlContructor(content);
   }
   return (
-    <section className="location">
+    <section className="inventory">
       <div className="inventory__top-wrap">
         <h1 className="inventory__section-title">Inventory</h1>
         <form className="inventory__form" id="form">
