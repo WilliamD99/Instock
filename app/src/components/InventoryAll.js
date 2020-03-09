@@ -4,7 +4,7 @@ import checkStatus from "../helpers/checkStatus";
 import { Link, useRouteMatch } from "react-router-dom";
 
 export default function InventoryAll({ inventory }) {
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
   let main = [];
   let htmlContructor = content => {
     let items = content.items;
