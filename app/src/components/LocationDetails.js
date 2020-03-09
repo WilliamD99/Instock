@@ -53,4 +53,3 @@ export default function LocationDetails({ locations }) {
   }
 
   return <section className="location-details">{contents}</section>;
-}
