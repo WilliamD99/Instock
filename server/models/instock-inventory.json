@@ -10,12 +10,13 @@
                     "country": "Canada"
                 },
                 "quantity": "12000",
-                "status": "1",
+                "status": true,
                 "categories": [
                     "Food",
                     "Fruits"
                 ],
-                "description": "This is bananas"
+                "description": "This is bananas",
+                "date": "05/25/2019"
             },
             {
                 "ref": "JK2020FD7811202",
@@ -25,12 +26,13 @@
                     "country": "Canada"
                 },
                 "quantity": "22000",
-                "status": "1",
+                "status": true,
                 "categories": [
                     "Food",
                     "Fruits"
                 ],
-                "description": "This is apples"
+                "description": "This is apples",
+                "date": "09/13/2019"
             }
         ]
     },
@@ -45,12 +47,13 @@
                     "country": "Canada"
                 },
                 "quantity": "14000",
-                "status": "1",
+                "status": true,
                 "categories": [
                     "Food",
                     "Fruits"
                 ],
-                "description": "This is pearls"
+                "description": "This is pearls",
+                "date": "12/04/2019"
             }
         ]
     }

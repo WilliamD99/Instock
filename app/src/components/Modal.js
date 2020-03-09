@@ -3,18 +3,10 @@ import { revealModal, cancel } from "../helpers/toggleModal";
 import Switch from "react-switch";
 
 export default class Modal extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: null,
-      date: null,
-      city: null,
-      country: null,
-      quantity: null,
-      checked: false,
-      description: null
-    };
-  }
+  state = {
+    checked: false
+  };
+
   handleChange = event => {
     const target = event.target;
     this.setState({

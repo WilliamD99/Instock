@@ -1,6 +1,7 @@
 import React from "react";
-/* import { Link } from "react-router-dom"; */
+import { Link } from "react-router-dom";
 import Logo from "../assets/Logo/Logo-instock.svg";
+import activePage from "../helpers/activePage";
 
 export default function Header() {
   return (
@@ -10,12 +11,22 @@ export default function Header() {
           <img className="header__logo" src={Logo} alt="InStock Logo" />
         </a>
         <nav className="header__menu">
-          <a className="header__menu-link active" href="/">
+          <Link
+            className="header__menu-link"
+            to="/inventory"
+            onClick={activePage}
+            id="inventory"
+          >
             Inventory
-          </a>
-          <a className="header__menu-link" href="/">
+          </Link>
+          <Link
+            className="header__menu-link active"
+            to="/locations"
+            onClick={activePage}
+            id="locations"
+          >
             Locations
-          </a>
+          </Link>
         </nav>
       </div>
       {/* <Link className="header__logo-link" to="/">

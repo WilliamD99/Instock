@@ -5,12 +5,12 @@
   position: fixed;
   bottom: 10%;
   right: 5%;
-  height: 4rem;
-  width: 4rem;
+  height: 3/75rem;
+  width: 3.75rem;
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  z-index: 1;
+  z-index: 1000;
 }
 .modal-wraper {
   position: absolute;
@@ -108,9 +108,7 @@
 }
 @include tablet {
   .create-button {
-    height: 6rem;
-    width: 6rem;
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
   .modal {
     height: 85%;

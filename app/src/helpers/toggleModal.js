@@ -3,7 +3,6 @@ import $ from "jquery";
 export const cancel = event => {
   let modal = $("#modal");
   let modalWraper = $(".modal-wraper");
-
   event.preventDefault();
   modal.fadeOut("slow", () => {
     modal.css("display", "none");
@@ -16,7 +15,6 @@ export const cancel = event => {
 export const revealModal = () => {
   let modal = $("#modal");
   let modalWraper = $(".modal-wraper");
-
   modal.fadeIn("fast", () => {
     modal.css({ display: "flex", "flex-direction": "column" });
   });
