@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./styles/main.css";
 import Location from "./components/Location";
+import LocationDetails from "./components/LocationDetails";
 import Header from "./components/Header";
 import API from "./helpers/API";
 import {
