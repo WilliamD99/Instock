@@ -39,7 +39,12 @@ class App extends Component {
             <Redirect from="/" to="/locations" exact />
             <Route
               path="/locations"
-              render={() => <Location locations={this.state.locations} />}
+              render={() => (
+                <Location
+                  locations={this.state.locations}
+                  inventory={this.state.inventory}
+                />
+              )}
             ></Route>
             <Route
               path="/inventory"

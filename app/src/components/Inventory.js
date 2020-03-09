@@ -1,12 +1,11 @@
 import React from "react";
-import checkStatus from "../helpers/checkStatus";
-import { Link, Switch, Route, useRouteMatch } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 // import details from "../helpers/details";
 import Product from "../components/Product";
 import InventoryAll from "../components/InventoryAll";
 
 export default function Inventory({ inventory }) {
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
   return (
     <div>
       <Switch>
@@ -23,6 +22,7 @@ export default function Inventory({ inventory }) {
             const location = inventory.find(matchId => {
               return id === matchId.id;
             });
+
             const item = location.items.find(matchRef => {
               return ref === matchRef.ref;
             });
