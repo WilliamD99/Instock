@@ -1,5 +1,6 @@
 /* Mobile First */
 .inventory {
+  display: inherit;
   padding: 0 16px 16px 16px;
   &__section-title {
     @include headings(1.8rem, 1.5rem);
@@ -9,6 +10,10 @@
     @include headings(0.8rem, 1.2rem);
     @include demi;
     margin: 0;
+    a {
+      text-decoration: none;
+      color: black;
+    }
   }
   &__description,
   &__date,
@@ -38,10 +43,12 @@
   &__status-wrap {
     width: 100%;
     margin: 0 0 24px 0;
+    z-index: 2;
   }
   &__item-button-wrap {
     display: flex;
     justify-content: space-between;
+    z-index: 10000;
   }
   &__input {
     @include headings(1rem, 1.5rem);

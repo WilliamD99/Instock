@@ -16,9 +16,16 @@ export const revealModal = () => {
   let modal = $("#modal");
   let modalWraper = $(".modal-wraper");
   modal.fadeIn("fast", () => {
-    modal.css({ display: "flex", "flex-direction": "column" });
+    modal.css({
+      display: "flex",
+      "flex-direction": "column",
+      "z-index": "10000"
+    });
   });
   modalWraper.fadeIn("fast", () => {
-    modalWraper.css("background-color", "rgba(0, 0, 0, 0.7)");
+    modalWraper.css({
+      "background-color": "rgba(0, 0, 0, 0.7)",
+      "z-index": "3"
+    });
   });
 };
