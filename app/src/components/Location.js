@@ -17,7 +17,7 @@ export default function Location({ locations }) {
             <h2 className="location__info" key={index}>
               {location.contact.name}
             </h2>
-            <h2 className="location__contact-title" key={index}>
+            <h2 className="location__contact-title">
               {location.contact.title}
             </h2>
           </div>

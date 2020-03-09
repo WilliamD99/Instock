@@ -13,34 +13,44 @@ import {
 } from "react-router-dom";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      locations: null
-    };
-  }
+  state = {
+    locations: null,
+    inventory: null
+  };
   async componentDidMount() {
-    let dataObjects = await API.get("locations/");
-    let data = dataObjects.data;
+    let locationObjects = await API.get("locations/");
+    let inventoryObjects = await API.get("inventory/");
+
+    let locationData = locationObjects.data;
+    let inventoryData = inventoryObjects.data;
+
     this.setState({
-      locations: data
+      locations: locationData,
+      inventory: inventoryData
     });
   }
   render() {
-    return (
-      <Router>
-        <Header />
-        <Switch>
-          <Redirect from="/" to="/locations" exact />
-          <Route
-            path="/locations"
-            render={() => <Location locations={this.state.locations} />}
-          ></Route>
-          <Route path="/inventory" component={Inventory}></Route>
-          <Modal />
-        </Switch>
-      </Router>
-    );
+    if (this.state.locations === null || this.state.inventory === null) {
+      return <h1>Loading ...</h1>;
+    } else {
+      return (
+        <Router>
+          <Header />
+          <Switch>
+            <Redirect from="/" to="/locations" exact />
+            <Route
+              path="/locations"
+              render={() => <Location locations={this.state.locations} />}
+            ></Route>
+            <Route
+              path="/inventory"
+              render={() => <Inventory inventory={this.state.inventory} />}
+            ></Route>
+            <Modal />
+          </Switch>
+        </Router>
+      );
+    }
   }
 }
 export default App;

@@ -1,7 +1,6 @@
-export const activeInventory = () => {
+export default function() {
   let inventory = document.getElementById("inventory");
   let locations = document.getElementById("locations");
-
   if (inventory.classList.value.indexOf("active") === -1) {
     inventory.classList.add("active");
   } else {
@@ -12,4 +11,4 @@ export const activeInventory = () => {
   } else {
     locations.classList.remove("active");
   }
-};
+}
