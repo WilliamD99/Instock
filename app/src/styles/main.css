@@ -772,6 +772,16 @@ p {
   margin: 0 0 24px 0;
 }
 
+.product__product-item-wrap {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product__product-item {
+  width: 100%;
+}
+
 .product__edit-button-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -795,11 +805,6 @@ p {
   display: inline-block;
   border: 0;
   border-radius: 0.4rem;
-  cursor: pointer;
-}
-
-.product__stock-button:hover {
-  background-color: #0065ad;
 }
 
 .product__edit-button {
