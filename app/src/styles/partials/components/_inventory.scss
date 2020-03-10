@@ -2,6 +2,11 @@
 .inventory {
   display: inherit;
   padding: 0 16px 16px 16px;
+  &__bg {
+    background-color: $alabaster;
+    margin: 0;
+    padding: 0 16px 16px 16px;
+  }
   &__section-title {
     @include headings(1.8rem, 1.5rem);
     margin: 32px 0 16px 0;
@@ -92,6 +97,9 @@
     width: 100vw;
     padding: 0 24px;
     margin: 0 auto;
+    &__bg {
+      padding: 0 24px;
+    }
     &__section-title {
       @include headings(2.4rem, 1.5rem);
       margin: 56px 0 14px 0;

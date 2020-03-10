@@ -520,6 +520,12 @@ p {
   padding: 0 16px 16px 16px;
 }
 
+.inventory__bg {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0 16px 16px 16px;
+}
+
 .inventory__section-title {
   font-size: 1.8rem;
   line-height: 1.5rem;
@@ -626,6 +632,9 @@ p {
     width: 100vw;
     padding: 0 24px;
     margin: 0 auto;
+  }
+  .inventory__bg {
+    padding: 0 24px;
   }
   .inventory__section-title {
     font-size: 2.4rem;
