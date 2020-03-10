@@ -11,7 +11,7 @@ export default function LocationDetails({ location, items }) {
     <div className="location-details__detail-location-wrap">
       <div className="location-details__item-wrap">
         <div className="location-details__title-wrap">
-          <Link to="/location">
+          <Link to="/locations">
             <img className="location-details__icon" src={Arrow} alt="Arrow" />
           </Link>
           <h1 className="location-details__section-title">{location.name}</h1>
