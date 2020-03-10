@@ -793,6 +793,16 @@ p {
   margin: 0 0 24px 0;
 }
 
+.product__product-item-wrap {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product__product-item {
+  width: 100%;
+}
+
 .product__edit-button-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -969,6 +979,10 @@ p {
   border: none;
   cursor: pointer;
   z-index: 1000;
+}
+
+.uploadMessage {
+  display: none;
 }
 
 .modal-wraper {

@@ -12,6 +12,9 @@
   cursor: pointer;
   z-index: 1000;
 }
+.uploadMessage {
+  display: none;
+}
 .modal-wraper {
   position: absolute;
   background-color: initial;

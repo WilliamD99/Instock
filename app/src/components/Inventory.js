@@ -7,7 +7,7 @@ import InventoryAll from "../components/InventoryAll";
 export default function Inventory({ inventory }) {
   let { path } = useRouteMatch();
   return (
-    <div>
+    <>
       <Switch>
         <Route
           exact
@@ -30,6 +30,6 @@ export default function Inventory({ inventory }) {
           }}
         ></Route>
       </Switch>
-    </div>
+    </>
   );
 }

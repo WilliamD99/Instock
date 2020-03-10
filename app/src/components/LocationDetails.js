@@ -1,14 +1,13 @@
 import React from "react";
 import Arrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import checkStatus from "../helpers/checkStatus";
 
 export default function LocationDetails({ location, items }) {
   let contents = [];
-  console.log(items);
-  let { url } = useRouteMatch();
+  let inventoryItems = [];
   let main = (
-    <div className="location-details__detail-location-wrap">
+    <div className="location-details__detail-location-wrap" key={location.id}>
       <div className="location-details__item-wrap">
         <div className="location-details__title-wrap">
           <Link to="/locations">
@@ -45,14 +44,11 @@ export default function LocationDetails({ location, items }) {
       </div>
     </div>
   );
-  contents.push(main);
-
-  let inventoryItems = [];
   let htmlContructor = content => {
     let renderItems = items.items.map(item => {
       let html = (
-        <div className="inventory__content-bg">
-          <div className="inventory__item" key={item.ref}>
+        <div className="inventory__content-bg" key={item.ref}>
+          <div className="inventory__item">
             <div className="inventory__product-item-wrap">
               <div className="inventory__item-button-wrap">
                 <h5 className="inventory__label">Item</h5>
@@ -88,13 +84,12 @@ export default function LocationDetails({ location, items }) {
     inventoryItems.push(renderItems);
     return renderItems;
   };
-
   htmlContructor(items.items);
-
+  contents.push(main);
   return (
-    <div>
+    <>
       <section className="location-details">{contents}</section>
       <section className="inventory__bg">{inventoryItems}</section>
-    </div>
+    </>
   );
 }
