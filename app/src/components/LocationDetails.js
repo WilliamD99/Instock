@@ -51,7 +51,7 @@ export default function LocationDetails({ location, items }) {
   let htmlContructor = content => {
     let renderItems = items.items.map(item => {
       let html = (
-        <div className="inventory__bg">
+        <div className="inventory__content-bg">
           <div className="inventory__item" key={item.ref}>
             <div className="inventory__product-item-wrap">
               <div className="inventory__item-button-wrap">
@@ -94,7 +94,7 @@ export default function LocationDetails({ location, items }) {
   return (
     <div>
       <section className="location-details">{contents}</section>
-      <section className="inventory-bg">{inventoryItems}</section>
+      <section className="inventory__bg">{inventoryItems}</section>
     </div>
   );
 }

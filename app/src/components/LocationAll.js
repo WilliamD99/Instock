@@ -13,7 +13,7 @@ export default function LocationAll({ locations }) {
           <div className="location__warehouse-wrap">
             <div className="location__title-button-wrap">
               <h5 className="location__label">Warehouse</h5>
-              <Link to={`${url}/${location.id}`}>
+              <Link className="location__button" to={`${url}/${location.id}`}>
                 <img
                   className="location-details__icon"
                   src={ArrowRight}

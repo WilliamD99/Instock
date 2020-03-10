@@ -64,10 +64,6 @@
     display: inline-block;
     border: 0;
     border-radius: 0.4rem;
-    cursor: pointer;
-    &:hover {
-      background-color: $brainflix-blue;
-    }
   }
   &__edit-button {
     background-color: $instock-blue;

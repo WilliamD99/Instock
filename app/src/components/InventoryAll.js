@@ -15,6 +15,16 @@ export default function InventoryAll({ inventory }) {
           <div className="inventory__product-item-wrap">
             <div className="inventory__item-button-wrap">
               <h5 className="inventory__label">Item</h5>
+              <Link
+                className="inventory__button"
+                to={`${url}/${content.id}/items/${item.ref}`}
+              >
+                <img
+                  className="inventory__details__icon"
+                  src={ArrowRight}
+                  alt="Arrow Right"
+                />
+              </Link>
             </div>
             <h2 className="inventory__name">{item.name}</h2>
             <h2 className="inventory__description">{item.description}</h2>
@@ -39,13 +49,6 @@ export default function InventoryAll({ inventory }) {
             <h5 className="inventory__label">Status</h5>
             <h2 className=" inventory__status">{checkStatus(item.status)}</h2>
           </div>
-          <Link to={`${url}/${content.id}/items/${item.ref}`}>
-            <img
-              className="inventory__details__icon"
-              src={ArrowRight}
-              alt="Arrow Right"
-            />
-          </Link>
         </div>
       );
       return html;
