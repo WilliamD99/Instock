@@ -249,17 +249,7 @@ p {
 }
 
 .location__button {
-  background-color: transparent;
-  color: #afafaf;
-  font-size: 1.6rem;
-  line-height: 0;
-  font-family: avenirNextDemi, Helvetica, Arial, sans-serif;
-  margin: 0;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   cursor: pointer;
-  border: 0;
 }
 
 .location__button:focus {
@@ -579,7 +569,7 @@ p {
 .inventory__product-item-wrap, .inventory__order-wrap, .inventory__location-wrap, .inventory__quantity-wrap, .inventory__status-wrap {
   width: 100%;
   margin: 0 0 24px 0;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .inventory__item-button-wrap {
@@ -609,16 +599,9 @@ p {
 }
 
 .inventory__button {
-  background-color: transparent;
-  color: #afafaf;
-  font-size: 1.6rem;
-  line-height: 0;
-  font-family: avenirNextDemi, Helvetica, Arial, sans-serif;
   margin: 0;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border: 0;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .inventory__button:focus {
@@ -712,8 +695,9 @@ p {
     width: 1080px;
     margin: 0 auto;
   }
-  .inventory__bg {
-    padding: 0 90px;
+  .inventory__content-bg {
+    /* padding: 0 90px; */
+    width: 1080px;
     margin: 0 auto;
   }
   .inventory__item-wrap {
@@ -832,11 +816,6 @@ p {
   display: inline-block;
   border: 0;
   border-radius: 0.4rem;
-  cursor: pointer;
-}
-
-.product__stock-button:hover {
-  background-color: #0065ad;
 }
 
 .product__edit-button {
@@ -984,7 +963,7 @@ p {
   position: fixed;
   bottom: 10%;
   right: 5%;
-  height: 3/75rem;
+  height: 3.75rem;
   width: 3.75rem;
   border-radius: 50%;
   border: none;

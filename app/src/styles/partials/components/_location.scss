@@ -63,16 +63,7 @@
     }
   }
   &__button {
-    background-color: transparent;
-    color: $silver;
-    @include headings(1.6rem, 0);
-    @include demi;
-    margin: 0;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     cursor: pointer;
-    border: 0;
     &:focus {
       outline: none;
     }
