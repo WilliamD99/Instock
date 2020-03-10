@@ -2,6 +2,11 @@
 .inventory {
   display: inherit;
   padding: 0 16px 16px 16px;
+  &__bg {
+    background-color: $alabaster;
+    margin: 0;
+    padding: 0 16px 16px 16px;
+  }
   &__section-title {
     @include headings(1.8rem, 1.5rem);
     margin: 32px 0 16px 0;
@@ -92,6 +97,9 @@
     width: 100vw;
     padding: 0 24px;
     margin: 0 auto;
+    &__bg {
+      padding: 0 24px;
+    }
     &__section-title {
       @include headings(2.4rem, 1.5rem);
       margin: 56px 0 14px 0;
@@ -155,6 +163,10 @@
   .inventory {
     width: 1080px;
     margin: 0 auto;
+    &__bg {
+      padding: 0 90px;
+      margin: 0 auto;
+    }
     &__item-wrap {
       width: 100%;
       margin-right: 4em;
@@ -180,6 +192,15 @@
       position: absolute;
       right: 1rem;
       top: 2.8em;
+    }
+  }
+}
+@include huge {
+  .inventory {
+    margin: 0 auto;
+    &__bg {
+      padding: 0 90px;
+      margin: 0 auto;
     }
   }
 }

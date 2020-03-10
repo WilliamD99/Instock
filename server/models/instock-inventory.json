@@ -1,63 +1,54 @@
 [
-    {
-        "id": "123456",
-        "items": [
-            {
-                "ref": "JK2020FD7811201",
-                "name": "Banana",
-                "location": {
-                    "city": "Toronto",
-                    "country": "Canada"
-                },
-                "quantity": "12000",
-                "status": true,
-                "categories": [
-                    "Food",
-                    "Fruits"
-                ],
-                "description": "This is bananas",
-                "date": "05/25/2019",
-                "client": "Nam Doan"
-            },
-            {
-                "ref": "JK2020FD7811202",
-                "name": "Apple",
-                "location": {
-                    "city": "Montreal",
-                    "country": "Canada"
-                },
-                "quantity": "22000",
-                "status": true,
-                "categories": [
-                    "Food",
-                    "Fruits"
-                ],
-                "description": "This is apples",
-                "date": "09/13/2019",
-                "client": "Vinicius"
-            }
-        ]
-    },
-    {
-        "id": "123457",
-        "items": [
-            {
-                "ref": "JK2020FD7811203",
-                "name": "Pearl",
-                "location": {
-                    "city": "Vancouver",
-                    "country": "Canada"
-                },
-                "quantity": "14000",
-                "status": true,
-                "categories": [
-                    "Food",
-                    "Fruits"
-                ],
-                "description": "This is pearls",
-                "date": "12/04/2019",
-                "client": "John"
-            }
-        ]
-    }
+  {
+    "id": "123456",
+    "items": [
+      {
+        "ref": "JK2020FD7811201",
+        "name": "Banana",
+        "location": {
+          "city": "Toronto",
+          "country": "CA"
+        },
+        "quantity": "12000",
+        "status": true,
+        "categories": ["Food", "Fruits"],
+        "description": "This is bananas",
+        "date": "05/25/2019",
+        "client": "Nam Doan"
+      },
+      {
+        "ref": "JK2020FD7811202",
+        "name": "Apple",
+        "location": {
+          "city": "Montreal",
+          "country": "CA"
+        },
+        "quantity": "22000",
+        "status": true,
+        "categories": ["Food", "Fruits"],
+        "description": "This is apples",
+        "date": "09/13/2019",
+        "client": "Vinicius"
+      }
+    ]
+  },
+  {
+    "id": "123457",
+    "items": [
+      {
+        "ref": "JK2020FD7811203",
+        "name": "Pearl",
+        "location": {
+          "city": "Vancouver",
+          "country": "CA"
+        },
+        "quantity": "14000",
+        "status": true,
+        "categories": ["Food", "Fruits"],
+        "description": "This is pearls",
+        "date": "12/04/2019",
+        "client": "John"
+      }
+    ]
+  }
 ]

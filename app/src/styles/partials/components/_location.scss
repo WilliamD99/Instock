@@ -36,6 +36,10 @@
     display: flex;
     justify-content: space-between;
   }
+  &__title-button-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
   &__contact-wrap {
     @extend .location__warehouse-wrap;
   }
