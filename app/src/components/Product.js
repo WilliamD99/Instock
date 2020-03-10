@@ -1,5 +1,7 @@
 import React from "react";
 import checkStatus from "../helpers/checkStatus";
+import { Link } from "react-router-dom";
+import Arrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 
 export default function Product({ item }) {
   let content = (
@@ -44,6 +46,9 @@ export default function Product({ item }) {
   return (
     <section className="product">
       <div className="product__top-wrap">
+        <Link to="/inventory">
+          <img className="product__icon" src={Arrow} alt="Arrow" />
+        </Link>
         <h1 className="product__section-title">{item.name}</h1>
         <button className="product__stock-button">
           {checkStatus(item.status)}

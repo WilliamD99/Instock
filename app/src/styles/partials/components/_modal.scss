@@ -5,12 +5,15 @@
   position: fixed;
   bottom: 10%;
   right: 5%;
-  height: 3/75rem;
+  height: 3.75rem;
   width: 3.75rem;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   z-index: 1000;
+}
+.uploadMessage {
+  display: none;
 }
 .modal-wraper {
   position: absolute;

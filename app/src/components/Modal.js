@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { revealModal, cancel } from "../helpers/toggleModal";
 import Switch from "react-switch";
+import API from "../helpers/API";
 
 export default class Modal extends Component {
   state = {
     checked: false
   };
-
   handleChange = event => {
     const target = event.target;
     this.setState({
@@ -18,6 +18,23 @@ export default class Modal extends Component {
       checked
     });
   };
+  submitHandle = event => {
+    event.preventDefault();
+    if (this.state.productName === "") {
+      alert("Please provide name of the prodcut");
+    }
+    let data = API.post("/inventory", {
+      name: this.state.productName,
+      location: {
+        city: this.state.city,
+        country: this.state.country
+      },
+      quantity: this.state.quantity,
+      description: this.state.description,
+      status: this.state.status,
+      date: this.state.date
+    });
+  };
   render() {
     return (
       <>
@@ -27,12 +44,12 @@ export default class Modal extends Component {
         <div className="modal-wraper">
           <div className="modal" id="modal">
             <h1 className="modal__title">Create New</h1>
-            <form className="modal__form">
+            <form className="modal__form" onSubmit={this.submitHandle}>
               <div className="modal__form--input">
                 <label htmlFor="product-name">Product</label>
                 <input
                   type="input"
-                  name="product-name"
+                  name="productName"
                   placeholder="Item Name"
                   onChange={this.handleChange}
                 ></input>
@@ -41,7 +58,7 @@ export default class Modal extends Component {
                 <label htmlFor="last-order">Last Ordered</label>
                 <input
                   type="date"
-                  name="last-order"
+                  name="date"
                   onChange={this.handleChange}
                 ></input>
               </div>
@@ -100,7 +117,7 @@ export default class Modal extends Component {
                 ></textarea>
 
                 <div className="modal__form--input-button">
-                  <input type="button" value="SAVE" id="save"></input>
+                  <input type="submit" value="SAVE" id="save"></input>
                   <button id="cancel" onClick={cancel}>
                     CANCEL
                   </button>

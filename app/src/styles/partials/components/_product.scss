@@ -4,6 +4,10 @@
   &__section-title {
     @include headings(1.8rem, 1.5rem);
     margin: 32px 0 16px 0;
+    width: 90%;
+  }
+  &__icon {
+    margin: 4px 18px 0 0;
   }
   &__name {
     @include headings(0.8rem, 1.2rem);
@@ -100,6 +104,10 @@
     &__section-title {
       @include headings(2.4rem, 1.5rem);
       margin: 56px 24px 56px 0;
+      width: 20%;
+    }
+    &__icon {
+      margin: 56px 18px 0 0;
     }
     &__item-wrap {
       width: 100%;

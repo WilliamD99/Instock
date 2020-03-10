@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useRouteMatch } from "react-router-dom";
+import ArrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
 
 export default function LocationAll({ locations }) {
   let { url } = useRouteMatch();
@@ -10,7 +11,16 @@ export default function LocationAll({ locations }) {
       let main = (
         <div className="location__item" key={index}>
           <div className="location__warehouse-wrap">
-            <h5 className="location__label">Warehouse</h5>
+            <div className="location__title-button-wrap">
+              <h5 className="location__label">Warehouse</h5>
+              <Link className="location__button" to={`${url}/${location.id}`}>
+                <img
+                  className="location-details__icon"
+                  src={ArrowRight}
+                  alt="Arrow Right"
+                />
+              </Link>
+            </div>
             <h2 className="location__name">{location.name}</h2>
             <h2 className="location__info">{location.address.street}</h2>
           </div>
@@ -32,9 +42,6 @@ export default function LocationAll({ locations }) {
             <h5 className="location__label">Categories</h5>
             <h2 className="location__info">{categories}</h2>
           </div>
-          <Link className="location__button" to={`${url}/${location.id}`}>
-            >
-          </Link>
         </div>
       );
       contents.push(main);

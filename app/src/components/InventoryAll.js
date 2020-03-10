@@ -2,10 +2,10 @@ import React from "react";
 import Modal from "./Modal";
 import checkStatus from "../helpers/checkStatus";
 import { Link, useRouteMatch } from "react-router-dom";
+import ArrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
 
 export default function InventoryAll({ inventory }) {
-  console.log(inventory);
-  let { url } = useRouteMatch();
+  let { path, url } = useRouteMatch();
   let main = [];
   let htmlContructor = content => {
     let items = content.items;
@@ -15,13 +15,18 @@ export default function InventoryAll({ inventory }) {
           <div className="inventory__product-item-wrap">
             <div className="inventory__item-button-wrap">
               <h5 className="inventory__label">Item</h5>
-              <button className="inventory__button">></button>
-            </div>
-            <h2 className="inventory__name">
-              <Link to={`${url}/${content.id}/items/${item.ref}`}>
-                {item.name}
+              <Link
+                className="inventory__button"
+                to={`${url}/${content.id}/items/${item.ref}`}
+              >
+                <img
+                  className="inventory__details__icon"
+                  src={ArrowRight}
+                  alt="Arrow Right"
+                />
               </Link>
-            </h2>
+            </div>
+            <h2 className="inventory__name">{item.name}</h2>
             <h2 className="inventory__description">{item.description}</h2>
           </div>
           <div className="inventory__order-wrap">
